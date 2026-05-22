@@ -50,7 +50,7 @@ export async function login_admin_controller(req, res) {
   }
 }
 
-export async function get_user_data() {
+export async function get_user_data(req, res) {
   try {
     const { user } = req;
 

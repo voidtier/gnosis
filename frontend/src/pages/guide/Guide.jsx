@@ -1,7 +1,7 @@
 export default function Guide() {
   return (
     <>
-      <h1 className="text-3xl text-mauve-900">Guide page</h1>
+      <main className="bg-zinc-950 w-full min-h-screen">Guide page</main>
     </>
   );
 }

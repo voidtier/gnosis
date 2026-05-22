@@ -1,7 +1,9 @@
 export default function Documentation() {
   return (
     <>
-      <h1 className="text-3xl text-mauve-900">Documentation page</h1>
+      <main className="bg-zinc-950 w-full min-h-screen">
+        Documentation page
+      </main>
     </>
   );
 }

@@ -52,7 +52,7 @@ export async function login_admin_controller(req, res) {
 
 export async function get_user_data() {
   try {
-    const { user } = req.body;
+    const { user } = req;
 
     if (!user) {
       return res.status(403).json({

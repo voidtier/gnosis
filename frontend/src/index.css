@@ -4,3 +4,8 @@ body,
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  /*padding: 8px;*/
+  background: #09090b;
+}

@@ -6,8 +6,10 @@ export default function Layout() {
   return (
     <>
       <Header />
-      <Outlet />
-      <Footer />
+      <div className="border border-zinc-800 border-t-0 m-2 mt-0 rounded-b-xl overflow-hidden">
+        <Outlet />
+        <Footer />
+      </div>
     </>
   );
 }

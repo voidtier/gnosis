@@ -2,15 +2,13 @@ import blog_model from "./blog.model.js";
 
 export async function get_blog_controller(req, res) {
   try {
-    const owner_id = req.user._id;
-
-    const existing_blog = await blog_model.find({ owner_id });
+    const existing_blog = await blog_model.find();
 
     const blog_array = [...existing_blog];
 
     return res.status(200).json({
       data: blog_array,
-      message: "blog is created",
+      message: "blog is fetched",
       success: true,
     });
   } catch (error) {
@@ -56,12 +54,12 @@ export async function update_blog_controller(req, res) {
     const blog_id = req.params.id;
 
     const updated_blog = await blog_model.findByIdAndUpdate(
-      { blog_id },
+      blog_id,
       { $set: req.body },
       { returnDocument: "after" },
     );
 
-    return res.status(202).json({
+    return res.status(200).json({
       data: updated_blog,
       message: "blog is updated",
       success: true,
@@ -75,9 +73,9 @@ export async function delete_blog_controller(req, res) {
     const { user } = req;
     const blog_id = req.params.id;
 
-    await blog_model.findByIdAndDelete({ blog_id });
+    await blog_model.findByIdAndDelete(blog_id);
 
-    return res.status(204).json({
+    return res.status(200).json({
       message: "blog is deleted",
       success: true,
     });

@@ -56,7 +56,7 @@ export async function update_blog_controller(req, res) {
     const updated_blog = await blog_model.findByIdAndUpdate(
       blog_id,
       { $set: req.body },
-      { returnDocument: "after" },
+      { new: true },
     );
 
     return res.status(200).json({

@@ -6,8 +6,11 @@ export async function login_admin_controller(req, res) {
   try {
     const { email, password } = req.body;
     const foundUser = await user_model.findOne({ email });
+
     if (!foundUser) {
-      return res.json("email or password is incorrect");
+      return res
+        .status(401)
+        .json({ message: "email or password is incorrect", success: false });
     }
 
     if (foundUser.role !== "admin") {
@@ -39,6 +42,7 @@ export async function login_admin_controller(req, res) {
     return res.status(200).json({
       message: "Welcome back, Admin",
       user: {
+        _id: foundUser._id,
         username: foundUser.username,
         email: foundUser.email,
         role: foundUser.role,
@@ -64,6 +68,7 @@ export async function get_user_data(req, res) {
     return res.status(200).json({
       message: "Welcome back, Admin",
       user: {
+        _id: user._id,
         username: user.username,
         email: user.email,
         role: user.role,

@@ -89,7 +89,9 @@ export default function Admin_dashboard() {
   const [show_create, set_show_create] = useState(false);
   const [create_form, set_create_form] = useState({
     title: "",
+    description: "",
     type: "blog",
+    tag: "",
     status: "draft",
   });
   const [active_nav, set_active_nav] = useState("dashboard");
@@ -400,6 +402,23 @@ export default function Admin_dashboard() {
               </div>
               <div>
                 <label className="text-xs text-zinc-600 mb-1.5 block">
+                  Description
+                </label>
+                <textarea
+                  type="text"
+                  value={create_form.description}
+                  onChange={(e) =>
+                    set_create_form((p) => ({
+                      ...p,
+                      description: e.target.value,
+                    }))
+                  }
+                  placeholder="Enter description..."
+                  className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-2.5 text-sm text-zinc-200 placeholder:text-zinc-700 outline-none focus:border-zinc-600 transition-colors duration-200"
+                ></textarea>
+              </div>
+              <div>
+                <label className="text-xs text-zinc-600 mb-1.5 block">
                   Type
                 </label>
                 <select
@@ -414,9 +433,25 @@ export default function Admin_dashboard() {
                   <option value="docs">Documentation</option>
                 </select>
               </div>
+
               <div>
                 <label className="text-xs text-zinc-600 mb-1.5 block">
-                  Status
+                  Tags
+                </label>
+                <input
+                  type="text"
+                  value={create_form.tag}
+                  onChange={(e) =>
+                    set_create_form((p) => ({ ...p, tag: e.target.value }))
+                  }
+                  placeholder="Enter tag..."
+                  className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-2.5 text-sm text-zinc-200 placeholder:text-zinc-700 outline-none focus:border-zinc-600 transition-colors duration-200"
+                />
+              </div>
+
+              <div>
+                <label className="text-xs text-zinc-600 mb-1.5 block">
+                  Make it
                 </label>
                 <select
                   value={create_form.status}

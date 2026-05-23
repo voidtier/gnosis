@@ -4,40 +4,42 @@ export default function Home() {
   return (
     <>
       <main className="bg-zinc-900/40 w-full min-h-screen ">
-        <section className="flex justify-between py-20">
+        <section className=" flex justify-between items-center py-20 px-5">
           <div className="my-5 ml-5">
             <div className="mb-5">
-              <p className="text-lg text-zinc-700">Knowledge platform</p>
+              <p className="text-lg text-zinc-600/40">Knowledge platform</p>
             </div>
             <div className="mb-3">
-              <p className="text-4xl text-zinc-400">
+              <p className="text-4xl text-zinc-200/60">
                 Where ideas find their depth.
               </p>
             </div>
             <div className="mb-5">
-              <p className="text-sm text-zinc-500/60">
+              <p className="text-sm text-zinc-400/60">
                 Blogs, structured guides, and technical documentation — curated
                 and crafted for those who think deeply.
               </p>
             </div>
             <div className="flex gap-x-3">
-              <button className="px-3.5 py-2.5 bg-transparent border rounded-xl border-zinc-800 text-zinc-300/60 hover:bg-zinc-800 transition-all duration-500 cursor-pointer">
+              <button className="px-3.5 py-2.5 bg-transparent border rounded-xl border-zinc-800 text-zinc-400/60 hover:bg-zinc-800 transition-all duration-500 cursor-pointer">
                 Browse Blog
               </button>
-              <button className="px-3.5 py-2.5 bg-zinc-800 border rounded-xl border-transparent text-zinc-300/60 hover:bg-transparent hover:border-zinc-800 transition-all duration-500 cursor-pointer">
+              <button className="px-3.5 py-2.5 bg-zinc-800 border rounded-xl border-transparent text-zinc-400/60 hover:bg-transparent hover:border-zinc-800 transition-all duration-500 cursor-pointer">
                 Explore Guide
               </button>
             </div>
           </div>
 
-          <div className="flex flex-col gap-y-2.5 bg-zinc-900 rounded-xl shadow px-2.5 py-2 mt-5 mr-5">
-            <h3 className="text-[16px] text-zinc-500/60">Latest Post</h3>
-            <p className="text-sm text-zinc-600/80">
-              The quiet power of structured thinking
-            </p>
-            <div className="flex justify-between text-xs text-zinc-700/80">
-              <p>5min ago</p>
-              <p>blog</p>
+          <div className="flex">
+            <div className="max-w-52 flex flex-col gap-y-2.5 bg-zinc-900 rounded-xl shadow-lg px-2.5 py-5 max-h-max">
+              <h3 className="text-[16px] text-zinc-600/40">Latest Post</h3>
+              <p className="text-sm text-zinc-200/60">
+                The quiet power of structured thinking
+              </p>
+              <div className="flex justify-between text-xs text-zinc-400/60">
+                <p>5min ago</p>
+                <p>blog</p>
+              </div>
             </div>
           </div>
         </section>
@@ -51,7 +53,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="w-full min-h-[40vh] flex gap-6 px-5 py-2.5 flex-nowrap overflow-y-auto snap-start snap-mandatory">
+            <div className="w-full min-h-[20vh] flex gap-6 px-5 py-2.5 flex-nowrap overflow-y-auto snap-start snap-mandatory">
               <Home_dummy_card />
               <Home_dummy_card />
               <Home_dummy_card />

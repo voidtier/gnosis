@@ -4,7 +4,7 @@ export default function Blog_preview({ blog_post = {}, classes }) {
       <article className={`${classes}`}>
         <div className="flex-1 min-w-0">
           <div className="flex gap-2 mb-2">
-            {blog_post.tags.map((t) => (
+            {blog_post.tag.forEach((t) => (
               <span
                 key={t}
                 className="text-xs text-zinc-700 border border-zinc-800 px-2 py-0.5 rounded-md"

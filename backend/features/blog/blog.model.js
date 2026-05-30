@@ -15,10 +15,12 @@ const blog_schema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    tag: {
-      type: String,
-      default: null,
-    },
+    tag: [
+      {
+        type: String,
+        default: null,
+      },
+    ],
     status: {
       type: String,
       required: true,

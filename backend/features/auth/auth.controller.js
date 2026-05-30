@@ -29,7 +29,7 @@ export async function login_admin_controller(req, res) {
 
     const token = jsonwebtoken.sign(
       {
-        id: foundUser._id,
+        _id: foundUser._id,
         username: foundUser.username,
         email: foundUser.email,
         role: foundUser.role,

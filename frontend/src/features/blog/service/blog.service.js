@@ -3,6 +3,7 @@ export async function create_blog(form_data) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(form_data),
+    credentials: "include",
   });
 
   if (!response) {

@@ -21,13 +21,19 @@ export async function create_blog_controller(req, res) {
     const { user } = req;
 
     if (!title) {
-      throw new Error({ message: "title isn't filled", success: false });
+      return res
+        .status(400)
+        .json({ message: "title isn't filled", success: false });
     }
     if (!description) {
-      throw new Error({ message: "description isn't filled", success: false });
+      return res
+        .status(400)
+        .json({ message: "description isn't filled", success: false });
     }
     if (!status) {
-      throw new Error({ message: "status isn't filled", success: false });
+      return res
+        .status(400)
+        .json({ message: "status isn't filled", success: false });
     }
 
     const new_blog = new blog_model({
@@ -45,7 +51,9 @@ export async function create_blog_controller(req, res) {
       success: true,
     });
   } catch (error) {
-    return res.status(500).send("couldn't create blog" + error.message);
+    return res
+      .status(500)
+      .json({ message: "couldn't create blog ", success: false });
   }
 }
 export async function update_blog_controller(req, res) {

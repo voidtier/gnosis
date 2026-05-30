@@ -3,9 +3,8 @@ import Home_dummy_card from "./Home_dummy_cards";
 export default function Home() {
   return (
     <main className="bg-zinc-950 w-full min-h-screen">
-      {/* Hero */}
       <section className="flex justify-between items-start py-20 px-8 border-b border-zinc-800/60">
-        <div className="max-w-lg">
+        <div className="max-w-lg ">
           <p className="text-xs tracking-[0.2em] uppercase text-zinc-700 mb-5">
             Knowledge platform
           </p>
@@ -40,7 +39,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sections */}
       <section className="flex flex-col gap-y-0 py-10 px-8">
         {/* Blog row */}
         <div className="flex border border-zinc-800/60 rounded-2xl overflow-hidden mb-8">
@@ -57,7 +55,7 @@ export default function Home() {
             <p className="text-zinc-600 text-xs mb-5">
               Essays and perspectives on topics that matter
             </p>
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 scrollbar-none">
+            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2">
               {Array.from({ length: 8 }).map((_, i) => (
                 <Home_dummy_card key={i} />
               ))}

@@ -9,11 +9,13 @@ import Guide from "./pages/guide/Guide.jsx";
 import Guide_post from "./pages/guide/Guide_post.jsx";
 import Login_admin from "./pages/auth/Login_admin.jsx";
 import Home from "./pages/home/Home.jsx";
+import Guide_create from "./pages/guide/Guide_create.jsx";
 import Not_found from "./pages/404/Not_found.jsx";
 import Error_page from "./pages/error/Error_page.jsx";
 import { Auth_provider } from "./features/auth/context/Auth.provider.jsx";
 import Admin_protected_route from "./features/admin/controller/Admin_protected.route.jsx";
 import ScrollToTop from "./components/utils/Scroll_to_top.jsx";
+import Blog_create from "./pages/blog/Blog_create.jsx";
 
 export default function Router_routes() {
   return (
@@ -40,6 +42,9 @@ export default function Router_routes() {
           <Route element={<Admin_protected_route allowed_roles={["admin"]} />}>
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/dashboard" element={<Admin_dashboard />} />
+            <Route path="/blog/create" element={<Blog_create />} />
+            <Route path="/guide/create" element={<Guide_create />} />
+            <Route path="/documentation/create" element={<Guide_create />} />
           </Route>
 
           {/* 404 */}

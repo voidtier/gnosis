@@ -73,14 +73,10 @@
 }
 
 @layer base {
-  * {
-    border-color: var(--color-hairline);
-  }
-
+  html,
   body {
-    background-color: var(--color-canvas);
-    color: var(--color-ink);
-    font-family: var(--font-mono);
+    background: var(--color-canvas);
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

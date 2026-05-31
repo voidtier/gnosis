@@ -29,7 +29,7 @@ export default function Blog_create() {
     }));
   }
   return (
-    <main className="bg-canvas min-h-screen w-full">
+    <main className="bg-void min-h-screen w-full">
       {/* Header */}
       <div className="px-lg pt-lg pb-md border-b border-hairline">
         <p className="text-xs tracking-xs uppercase text-mute mb-3">

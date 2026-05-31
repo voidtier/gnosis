@@ -4,7 +4,7 @@ export default function Blog_preview({ blog_post = {}, classes }) {
       <article className={`${classes}`}>
         <div className="flex-1 min-w-0">
           <div className="flex gap-2 mb-2">
-            {blog_post.tag.forEach((t) => (
+            {blog_post.tag.map((t) => (
               <span
                 key={t}
                 className="text-xs text-zinc-700 border border-zinc-800 px-2 py-0.5 rounded-md"
@@ -17,7 +17,7 @@ export default function Blog_preview({ blog_post = {}, classes }) {
             {blog_post.title}
           </h2>
           <p className="text-zinc-500 text-sm leading-relaxed line-clamp-2">
-            {blog_post.excerpt}
+            {blog_post.description}
           </p>
         </div>
         <div className="text-right shrink-0">

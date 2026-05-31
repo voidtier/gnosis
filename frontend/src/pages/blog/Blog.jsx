@@ -19,11 +19,11 @@ export default function Blog() {
         return set_loading(true);
       }
       set_data(result.data);
-      const tags = result.data.map((blog) => {
+      const tag = result.data.map((blog) => {
         return blog.tag;
       });
       set_filters((prev) => {
-        return [...prev, ...tags];
+        return [...prev, ...tag];
       });
       set_loading(false);
     }
@@ -31,7 +31,7 @@ export default function Blog() {
   }, []);
 
   const filtered =
-    active === "All" ? data : data.filter((p) => p.tags.includes(active));
+    active === "All" ? data : data.filter((p) => p.tag.includes(active));
 
   return (
     <main className="bg-zinc-950 w-full min-h-screen">

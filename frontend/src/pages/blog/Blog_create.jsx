@@ -88,7 +88,7 @@ export default function Blog_create() {
                   name="status"
                   value={form.status}
                   onChange={handle_input}
-                  className="text-zinc-400 text-sm border border-zinc-800 rounded-sm py-1 px-2 mt-2"
+                  className="bg-ink-deep border border-zinc-800 rounded-sm py-1 px-2 mt-2"
                 >
                   <option value="published">Published</option>
                   <option value="draft">Draft</option>
